@@ -22,7 +22,7 @@ defmodule Ringbot do
   end
 
   def start(_type, _args) do
-    run = Client.start("NzQ0MTc3NzE0NDE5OTkwNTk5.XzfbgQ.57TmK1eZNE2dA5LwM6reBijaZHQ")
+    run = Client.start(Application.get_env!(:myapp, :discord_token))
     use Commands
     run
   end
